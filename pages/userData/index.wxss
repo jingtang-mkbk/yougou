@@ -1,0 +1,30 @@
+/* pages/userData/index.wxss */
+.navbar{
+  height: 132rpx;
+  width: 100%;
+  background-color: #3296fa;
+  text-align: center;
+  line-height: 160rpx;
+  color: #fff;
+  position: relative;
+  /* margin-top: 20px; */
+}
+.navbar .navbar_cross{
+  width: 82rpx;
+  height: 82rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pic{
+  width: 60rpx;
+  height: 60rpx;
+  background-color: pink;
+  border-radius: 30rpx;
+  margin-top: 9rpx; 
+}
+.picbar{
+  width: 750rpx !important;
+  height: 88rpx !important;
+  background-color: purple;
+}

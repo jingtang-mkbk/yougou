@@ -1,0 +1,52 @@
+<!--pages/detail/index.wxml-->
+<view class="navbar">
+  <view class="navbar_cross" bind:tap="goBack">
+    <van-icon name="arrow-left" />
+  </view>
+  黑马头条
+</view>
+
+<!-- title -->
+<view class="title">{{detailArticle.title}}</view>
+<!-- user-info -->
+<view class="user_info">
+  <view class="user_info_left">
+    <image class="pic" src="{{detailArticle.aut_photo}}" mode=""/>
+    <view>
+      <view class="txt1">{{detailArticle.aut_name}}</view>
+      <view class="txt2">3年前</view>
+    </view>
+  </view>
+  <view class="user_info_right">
+    <button><van-icon name="plus" />关注</button>
+  </view>
+</view>
+<!-- content -->
+<view class="content">
+  <rich-text nodes="{{detailArticle.content}}"/>
+</view>
+<!-- divider -->
+<van-divider contentPosition="center">正文结束</van-divider>
+<view class="end">没有更多了</view>
+
+<!-- bottom -->
+<view class="bottom">
+  <view class="comm" bind:tap="showPopup">写评论</view>
+  <van-icon name="comment-o" size="40rpx" info="{{detailArticle.comm_count}}" />
+  <van-icon name="star-o" size="40rpx" />
+  <van-icon name="good-job-o" size="40rpx" />
+  <van-icon name="share-o" size="40rpx" />
+</view>
+<!-- popup -->
+<van-popup
+  show="{{ isShow }}"
+  position="bottom"
+  custom-style="height: 21%;"
+  bind:close="onClose"
+  z-index="1000"
+>
+  <view class="popbox">
+    <view><textarea maxlength="50"></textarea></view>
+    <view class="pub">发布</view>
+  </view>
+</van-popup>

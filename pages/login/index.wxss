@@ -1,0 +1,40 @@
+/* pages/login/index.wxss */
+.navbar{
+  height: 132rpx;
+  width: 100%;
+  background-color: #3296fa;
+  text-align: center;
+  line-height: 160rpx;
+  color: #fff;
+  position: relative;
+  /* margin-top: 20px; */
+}
+.navbar .navbar_cross{
+  width: 82rpx;
+  height: 82rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.van-field .van-button{
+  background-color: #3296fa;
+}
+
+.van-button--primary{
+  background-color: #3296fa !important;
+  border-color: #3296fa !important;
+}
+button:not([size=mini]) {
+  width: 160rpx !important;
+}
+
+.loginbtn{
+  margin: 30rpx;
+}
+
+.loginbtn .van-button{
+  width: 100% !important;
+  background-color: #3296fa;
+  border-color: #3296fa;
+}

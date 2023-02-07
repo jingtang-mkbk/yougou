@@ -1,0 +1,26 @@
+<!--pages/userData/index.wxml-->
+<view class="navbar">
+  <view class="navbar_cross">
+    <van-icon name="arrow-left" bind:tap="back" />
+  </view>
+  个人资料
+</view>
+
+<!-- <view>token:{{token}}</view>
+<view>photo:{{userData.photo}}</view>
+<view>name:{{userData.name}}</view>
+<view>gender:{{userData.gender}}</view>
+<view>mobile:{{userData.mobile}}</view> -->
+<van-cell title="头像" right-icon is-link center>
+  <view slot="">
+    <image src="{{userData.photo}}" mode="" class="pic"/>
+    <!-- <van-uploader file-list="{{ userData.photo }}" bind:after-read="afterRead"></van-uploader> -->
+  </view>
+</van-cell>
+
+
+
+<van-cell title="昵称" right-icon is-link center value="{{userData.name}}"></van-cell>
+<van-cell title="性别" right-icon is-link center value="{{userData.gender}}"></van-cell>
+<van-cell title="生日" right-icon is-link center value="{{userData.birthday}}"></van-cell>
+

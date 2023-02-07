@@ -1,0 +1,73 @@
+/* pages/my/index.wxss */
+.top{
+  height: 400rpx;
+  width: 100%;
+  background: url(http://liufusong.top/hmtt/img/banner.d43e3812.png);
+  padding-top: 120rpx;
+  box-sizing: border-box;
+}
+
+.top .user_pic_box{
+  box-sizing: border-box;
+  width: 100%;
+  height: 132rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.phone{
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.top .user_pic_box image{
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 66rpx;
+  border: 1px solid white;
+  margin-right: 10rpx;
+}
+.top .user_pic_box .edit{
+  width: 132rpx;
+  height: 132rpx;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.top .txt{
+  width: 100%;
+  height: 148rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.top .txt .txt_li{
+  width: 25%;
+  height: 148rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+.logout_box{
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  color: red;
+}
+
+.top .pic2{
+  height: 200rpx;
+  width: 100%;
+  text-align: center;
+}
+.top .pic2 image{
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 66rpx;
+  border: 1px solid #fff;
+}

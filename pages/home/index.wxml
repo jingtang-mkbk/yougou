@@ -1,0 +1,70 @@
+<!-- navbar -->
+<view class="navbar">
+  <view class="search" bind:tap="clickSearch">
+    <van-icon name="search" color="white" />
+    <text>搜索</text>
+  </view>
+</view>
+
+<!-- category -->
+<view class="category">
+  <van-tabs active="{{ active }}" bind:change="onChange" id="tabs">
+    <van-tab wx:for="{{channels}}" name="{{item.id}}" wx:key="id" title="{{item.name}}">
+      <view wx:if="{{results.length}}" class="container"> 
+        <scroll-view 
+          scroll-y class="scroll_v" 	
+          bindrefresherrefresh="dropdown" 
+          refresher-enabled 
+          refresher-triggered="{{isDropdown}}"
+        >
+          <van-cell-group>
+            <van-cell 
+              wx:for="{{results}}" 
+              wx:key="id"
+              title="{{item.title}}" 
+              use-label-slot
+              label="{{item.aut_name}}  {{item.comm_count}}评论  3年前"
+              border="{{ false }}" 
+              data-id="{{item.art_id}}"
+              bind:click="articlesDetail"
+            >
+              <!-- 三张图片 -->
+              <view wx:if="{{item.cover.type === 3}}" slot="label"> 
+                <view class="picbox">
+                  <image wx:for="{{item.cover.images}}" wx:key="*this" class="img" src="{{item}}" mode=""/>
+                </view>
+                <view>{{item.aut_name}}  {{item.comm_count}}评论  3年前</view>
+              </view>
+              <!-- 一张图片 -->
+              <view wx:elif="{{item.cover.type === 1}}" slot="" class="content">
+                <image src="{{item.cover.images[0]}}" mode=""/>
+              </view>
+              <!-- 无图 -->
+              <view wx:else="" slot="label">
+                {{item.aut_name}}  {{item.comm_count}}评论  3年前
+              </view>   
+            </van-cell>
+          </van-cell-group>
+        </scroll-view>
+      </view>
+      <view wx:else class="false"> 
+        暂无数据/请求失败
+      </view>
+    </van-tab>
+  </van-tabs>
+  <view class="icon_right" bind:tap="showPopup"> 
+    <van-icon name="wap-nav" size="22px" color="#646566" />
+  </view>
+</view>
+<!-- popup -->
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 80%;" bind:close="onClose">
+  <view class="popclose" bind:tap="onClose"><van-icon name="cross" size="43rpx" /></view>
+  <view class="mychannel">我的频道</view>
+  <van-grid gutter="{{ 10 }}">
+    <van-grid-item wx:for="{{myChannels}}" text="{{item.txt}}" wx:key="id" center />
+  </van-grid>
+  <view class="mychannel2">推荐频道</view>
+  <van-grid gutter="{{ 10 }}">
+    <van-grid-item  text="{{item.txt}}" wx:for="{{ recommendChannels }}" wx:key="id" center />
+  </van-grid>
+</van-popup>

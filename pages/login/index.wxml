@@ -1,0 +1,36 @@
+<!--pages/login/index.wxml-->
+
+<view class="navbar">
+  <view class="navbar_cross">
+    <van-icon name="cross" />
+  </view>
+  登录
+</view>
+<van-cell-group>
+  <van-field
+    value="{{ phone  }}"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    left-icon="phone-o"
+    error-message="{{errPhone}}"
+    bind:change="checkPhone"
+    maxlength="11"
+  />
+  <van-field
+    value="{{ verifyCode }}"
+    type="text"
+    left-icon="star-o"
+    placeholder="请输入验证码"
+    error-message="{{errVerifyCode}}"
+    border="{{ false }}"
+    bind:change="checkVerifyCode"
+    maxlength="6"
+  >
+    <van-button wx:if="{{countdown}}" bind:tap="getCode" slot="button" size="small" type="primary">发送验证码</van-button>
+    <view wx:else="{{!countdown}}" slot="right-icon">{{count}}s</view>
+  </van-field>
+</van-cell-group>
+
+<view class="loginbtn">
+  <van-button bind:tap="onLogin" type="primary" style="width: 100%;">登录</van-button>
+</view>

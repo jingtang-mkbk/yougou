@@ -1,0 +1,129 @@
+/* pages/detail/index.wxss */
+.navbar{
+  height: 132rpx;
+  width: 100%;
+  background-color: #3296fa;
+  text-align: center;
+  line-height: 160rpx;
+  color: #fff;
+  position: relative;
+  /* margin-top: 20px; */
+}
+.navbar .navbar_cross{
+  width: 82rpx;
+  height: 82rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.title{
+  width: 750rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+  padding: 50rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.user_info{
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 84rpx;
+}
+.user_info .user_info_left{
+  line-height: 84rpx;
+  display: flex;
+}
+.user_info .user_info_left .pic{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-right: 20rpx;
+  margin-top: 7rpx;
+}
+.user_info .user_info_left .txt1{
+  height: 48rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #3a3a3a;
+  line-height: 48rpx;
+}
+.user_info .user_info_left .txt2{
+  height: 36rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #b7b7b7;
+  line-height: 36rpx;
+}
+.user_info .user_info_right{
+  line-height: 84rpx;
+  padding: 15rpx 0;
+}
+.user_info .user_info_right button{
+  width: 166rpx;
+  height: 54rpx;
+  background-color: #3296fa;
+  line-height: 54rpx;
+  color: white;
+  font-weight: normal;
+  font-size: 24rpx;
+  border-radius: 27rpx;
+  padding: 0;
+}
+.content{
+  padding: 56rpx 32rpx;
+}
+.end{
+  text-align: center;
+  width: 750rpx;
+  margin-bottom: 100rpx;
+  padding: 32rpx 0 130rpx 0;
+  font-size: 28rpx;
+  color: #969799;
+}
+.bottom{
+  position: fixed;
+  height: 100rpx;
+  border: 1px #ccc solid;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bottom .comm{
+  width: 260rpx;
+  height: 48rpx;
+  border: 1px solid #ccc;
+  border-radius: 24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  margin: 0;
+  padding: 0;
+  font-size: 30rpx;
+  font-weight: normal;
+  background-color: #fff;
+  color: #999;
+}
+
+.popbox{
+  padding: 32rpx;
+  display: flex;
+}
+.popbox textarea{
+  padding: 20rpx 32rpx;
+  width: 500rpx;
+  height: 176rpx;
+  background-color: #f5f7f9;
+}
+.pub{
+  flex: 1;
+  line-height: 216rpx;
+  text-align: center;
+  color: #6ba3d8;
+}
